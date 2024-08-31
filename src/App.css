@@ -3,6 +3,61 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.main-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.main-button:hover {
+    background-color: #45a049;
+}
+
+.dropdown select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    appearance: none;
+}
+
+.dropdown select:focus {
+    outline: none;
+}
+
+.dropdown option {
+    background-color: white;
+    color: black;
+}
+
+.dropdown optgroup {
+    font-weight: bold;
+}
+
 .navbar {
     background-color: #333;
     color: white;
@@ -51,14 +106,38 @@ body {
     margin: 30px 0;
     padding: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease, border-radius 0.3s ease;
 }
 
 .sidebar ul li:first-child {
     margin-top: 60px;
 }
 
-.sidebar ul li:hover {
+.sidebar-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.sidebar-button:hover {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+}
+
+.sidebar-button.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.sidebar-button:not(.disabled):hover {
     background-color: white;
     color: black;
     border-radius: 8px;
